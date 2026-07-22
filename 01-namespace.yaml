@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: roboshop
+  labels:
+    environment: dev
+    project: roboshop
+    purpose: poc
+
+# this is used to create a separte name space for our project, what ever the resource we deply it will be under this namespace only.
