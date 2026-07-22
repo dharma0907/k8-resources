@@ -1,0 +1,11 @@
+# config map is used to store data , like key value pair, we can use this data in our pod/container. 
+#we can create config map using yaml file or using command line. we can use config map in pod/container as env variable or as file mount.
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  project: roboshop
+  course: kubernetes
+  trainer: sivakumar
