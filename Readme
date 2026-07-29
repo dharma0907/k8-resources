@@ -1,0 +1,17 @@
+# POD to PD commmunication
+
+we need to use service for pod to pod commmunication
+Since pod is ephemeral we cant use pod ip as DNS, K8 is giving us option to use services.
+1. pod to communication
+2. load balancing
+
+pod -> service -> endpoints(podip:container-port)
+
+1. clusterIP -> internal to kubernetes
+2. nodePort -> expose pod to outside world in internet
+	http://ec2-ip:nodePort -> clusterIP -> pod
+	30000–32767 -> ephemeral ports for nodePort
+	
+	k8 opens one ephemeral nodePort in all the worker nodes, if you hit any worker node on that nodePort, traffic will be forwarded to clusterIP and then to the pod
+3. LoadBalancer
+

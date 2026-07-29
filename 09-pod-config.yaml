@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-config
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef:
+        name: nginx-config
+
+# we have creqted a config map, weare using that config map here using  envFrom: configMapRef:
+#config maps are not confidentials, 
