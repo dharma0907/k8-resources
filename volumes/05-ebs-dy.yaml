@@ -22,7 +22,7 @@ spec:
     # args: ["-c", "while true; do echo $(date -u) >> /data/out.txt; sleep 5; done"]
     volumeMounts:
     - name: persistent-storage
-      mountPath: /data
+      mountPath:  /usr/share/nginx/html
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
